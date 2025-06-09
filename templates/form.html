@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Application Form</title>
+</head>
+<body style="font-family: sans-serif; background-color: #f4f4f4; padding: 20px;">
+  <h2>Career Application Form</h2>
+  <form action="http://localhost:5000/submit_application" method="POST" enctype="multipart/form-data">
+    <label for="category">Select Category:</label><br>
+    <select name="category" required>
+      <option value="">-- Select --</option>
+      <option value="IT">IT</option>
+      <option value="Marketing">Marketing</option>
+      <option value="HR">HR</option>
+    </select><br><br>
+
+    <label for="position">Position You're Applying For:</label><br>
+    <select name="position" required>
+      <option value="">-- Select --</option>
+      <option value="Developer">Developer</option>
+      <option value="Designer">Designer</option>
+      <option value="Manager">Manager</option>
+    </select><br><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label for="mobile">Mobile Number:</label><br>
+    <input type="tel" name="mobile" required pattern="[0-9]{10}" placeholder="10-digit number"><br><br>
+
+    <label for="resume">Upload Resume (PDF only):</label><br>
+    <input type="file" name="resume" accept=".pdf" required><br><br>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</body>
+</html>
