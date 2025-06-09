@@ -61,7 +61,8 @@ def submit_application():
     else:
         return jsonify({'error': 'Invalid file type. Only PDF allowed.'}), 400
 
+import os
+
 if __name__ == '__main__':
-    import os
-    
-    app.run(host='0.0.0.0', port=8000)
+    port = int(os.environ.get('PORT', 5000))  # default to 5000 for local
+    app.run(host='0.0.0.0', port=port)
